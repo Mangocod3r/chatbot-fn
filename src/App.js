@@ -6,7 +6,7 @@ import socketIO from 'socket.io-client';
 // const socket = socketIO.connect('https://chatbot-bn.vercel.app/');
 const socket = socketIO.connect("https://chatbot-bn.vercel.app/", {
    forceNew: true,
-   transports: ["polling"],
+   transports: ['websocket', 'polling'],
 });
 
 
