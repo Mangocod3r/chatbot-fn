@@ -3,7 +3,7 @@ import Home from './components/Home';
 import ChatPage from './components/ChatPage';
 import socketIO from 'socket.io-client';
 
-const socket = socketIO.connect('https://chatbot-bn-git-master-mangocod3r.vercel.app/');
+const socket = socketIO.connect('https://chatbot-bn-git-master-mangocod3r.vercel.app');
 
 export default function App() {
   return (
