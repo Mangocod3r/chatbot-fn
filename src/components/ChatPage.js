@@ -52,7 +52,7 @@ export default function ChatPage({ socket }){
 
   return (
     <>
-    <BasicExample />
+    <BasicExample socket={socket} />
     <div className='container-fluid main'>
     <div className="row">
       <ChatBar socket={socket} />
