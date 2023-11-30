@@ -10,7 +10,7 @@ const ChatBar = ({socket}) => {
   return (
     <div className="col-sm-3" style={{'background':'#3b3f3b'}}>
       <div className="text-center shadow p-3 rounded box" 
-        style={{ height: '87vh' , 'color':'white'}}
+        style={{ height: '87vh' , 'color':'white', background:'#3b3f3b'}}
       >
         <h4 className='mt-4'>ACTIVE USERS</h4>
         <div className="col">
