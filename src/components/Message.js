@@ -6,19 +6,22 @@ import React from 'react';
 const Message = ({ text, isSent, position, timestamp }) => {
   const messageStyle = {
     color: 'white',
-    maxWidth: '300px',
-    padding: '10px',
+    maxWidth: '50%',
+    padding: '2%',
     borderRadius: '10px',
-    fontSize: '15px',
+    fontSize: '90%',
     marginLeft: isSent ? 'auto' : '0',
+    marginBottom: '5%',
     backgroundColor: isSent ? getSentMessageColor(position) : '#e0e0e0',
   };
 
   return (
-    <div className="message__sender" style={messageStyle}>
+    <div className="message__sender position-relative" style={messageStyle}>
       {isSent}
       <p>{text}</p>
-      <span>{timestamp}</span>
+      <span className='position-absolute bottom-0 end-0' style={{'fontSize': '60%'}}>
+        {timestamp}
+      </span>
     </div>
   );
 };

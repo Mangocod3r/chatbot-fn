@@ -4,13 +4,15 @@ import {useNavigate} from 'react-router-dom';
 const Home = ({socket}) => {
     const navigate = useNavigate();
     const [userName, setUserName] = useState('');
-
+    const [room, setRoom] = useState('');
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('userName', userName);
         
         socket.emit('newUser', {userName, socketID: socket.id});
-        navigate('/chat');
+        // navigate('/chat');
+        navigate(`/chat/${room}`); // Use the room name in the route
     };
 
     return (
@@ -25,6 +27,15 @@ const Home = ({socket}) => {
                 className="username_inpu"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
+            />
+            <label htmlFor="room">Room Name</label>
+            <input
+                type="text"
+                name="room"
+                id="room"
+                className="room_input"
+                value={room}
+                onChange={(e) => setRoom(e.target.value)}
             />
             <button className="home__cta">SIGN IN</button>
         </form>

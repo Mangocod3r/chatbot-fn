@@ -24,6 +24,20 @@ body{
   font-size: 16px;
   font-family: "Source Sans Pro",Arial,sans-serif;
 }
+.my-buttoni, .bbi{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #111;
+  cursor: pointer;
+  border-radius: 50px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Source Sans Pro",Arial,sans-serif;
+}
 .blue{
   background: #0056D2;
   font-weight: 800;
@@ -33,7 +47,7 @@ body{
   width: 60%;
   
 }
-.my-button:before{
+.my-button:before, .my-buttoni:before{
   position: absolute;
   content: '';
   top: -2px;
@@ -49,13 +63,13 @@ body{
   transition: opacity .3s ease-in-out;
   animation: animate 20s linear infinite;
 }
-.my-button:hover:before{
+.my-button:hover:before, .my-buttoni:hover:before{
   opacity: 1;
 }
-.my-button:hover:active{
+.my-button:hover:active, .my-buttoni:hover:active{
   background: none;
 } 
-.my-button:hover:active:before{
+.my-button:hover:active:before, .my-buttoni:hover:active:before{
   filter: blur(2px);
 }
 @keyframes animate {
