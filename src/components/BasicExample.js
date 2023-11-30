@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function BasicExample({darkMode}) {
+export default function BasicExample({socket}) {
 
   const navigate = useNavigate();
 
   const handleLeaveChat = () => {
-    localStorage.removeItem('userName');
+    const userName = localStorage.getItem('userName');
+    socket.emit('leaveChat', { userName });
     navigate('/');
     window.location.reload();
   };
