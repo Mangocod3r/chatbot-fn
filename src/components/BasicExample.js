@@ -12,6 +12,7 @@ export default function BasicExample({socket}) {
 
   const handleLeaveChat = () => {
     const userName = localStorage.getItem('userName');
+    localStorage.removeItem('userName');
     socket.emit('leaveChat', { userName });
     navigate('/');
     window.location.reload();
